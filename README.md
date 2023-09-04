@@ -1,5 +1,12 @@
 # README 🥱
 
+## Common
+
+Specify port in `.env` file
+```env
+PORT=xxxx
+```
+
 ## Development 🤓
 
 Make sure all package are downloaded
