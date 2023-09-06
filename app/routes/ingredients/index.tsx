@@ -1,19 +1,9 @@
 import { json } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
+import { getIngredients } from '~/models/ingredient.server'
 
 export const loader = async () => {
-  return json({
-    ingredients: [
-      {
-        slug: 'test'
-        , title: 'title?'
-      }
-      , {
-        slug: 'test 2'
-        , title: 'title !'
-      }
-    ]
-  })
+  return json({ ingredients: await getIngredients() })
 }
 
 export default function Ingredients() {
