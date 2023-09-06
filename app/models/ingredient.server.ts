@@ -10,7 +10,8 @@ type Ingredient = {
 }
 
 export async function getIngredients(): Promise<Array<Ingredient>> {
-  const res = await fetch('https://api.metacuisine.fr/v1/ingredients')
+  const domain = process.env.API_BASE_URL
+  const res = await fetch(`${domain}/ingredients`)
 
   return res.json()
 }

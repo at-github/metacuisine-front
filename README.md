@@ -1,10 +1,14 @@
 # README 🥱
 
-## Common
+## Setup
 
-Specify port in `.env` file
+### .env
 ```env
 PORT=xxxx
+```
+
+```env
+API_BASE_URL=http…
 ```
 
 ## Development 🤓
