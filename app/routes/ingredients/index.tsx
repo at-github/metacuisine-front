@@ -14,8 +14,9 @@ export default function Ingredients() {
       <h2>Ingrédients</h2>
       <ul>
         {ingredients.map((ingredient) => (
-          <li key={ingredient.slug}>
-            {ingredient.title}
+          <li key={ingredient.id}>
+            {ingredient.name} {ingredient.price}<br/>
+            {ingredient.unit} {ingredient.origin_animal} {ingredient.average_weight}
           </li>
         ))}
       </ul>

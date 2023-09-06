@@ -1,17 +1,16 @@
 type Ingredient = {
-  slug: string;
-  title: string;
+  id: number;
+  created_at: string;
+  updated_at: string;
+  name: string;
+  price: number;
+  unit: string;
+  origin_animal: any;
+  average_weight: any;
 }
 
 export async function getIngredients(): Promise<Array<Ingredient>> {
-  return [
-    {
-      slug: 'first-ingredient'
-      , title: 'First ingredient'
-    }
-    , {
-      slug: 'second-ingredient'
-      , title: 'Second ingredient'
-    }
-  ]
+  const res = await fetch('https://api.metacuisine.fr/v1/ingredients')
+
+  return res.json()
 }
